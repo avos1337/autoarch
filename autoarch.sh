@@ -1,10 +1,20 @@
 #!/bin/bash
 
 # Dank arch machine setup starts here
-sudo pacman -Syu --noconfirm    # Update all packages
+pacman -Syu --noconfirm    # Update all packages
+
+# Setup configuration and variables
+./config.sh
+
+# Move resources to their appropriate places
+./sas/mover.sh
+
+su $nonrootusr 
 
 # Run standalone scripts
-sudo ./sas/install.sh
+sudo ./sas/install.sh # Install binary packages
+
+sudo ./sas/mover.sh
 
 
 
