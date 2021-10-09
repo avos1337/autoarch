@@ -9,7 +9,7 @@ export nonrootusr
 echo "Should autoarch setup a custom vimrc? (Press enter for default custom vimrc)\n"
 read docustvimrc
 
-if [[$docustvimrc == '']]; then
+if [ $docustvimrc == '' ]; then
     export docustvimrc='true'
     export custvimrcpath='default'
 else
