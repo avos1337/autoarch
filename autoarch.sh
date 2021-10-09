@@ -3,7 +3,8 @@
 # Dank arch machine setup starts here
 sudo pacman -Syu --noconfirm    # Update all packages
 
-
+# Run standalone scripts
+sudo ./sas/install.sh
 
 
 
